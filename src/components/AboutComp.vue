@@ -43,43 +43,7 @@
 }
 
 .fnt-s {
-    font-size: .9
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    rem;
+    font-size: .9rem;
 }
 
 .lft{
@@ -87,7 +51,7 @@
 }
 
 .one {
-    border-right: white solid 1px;
+    border-right: white solid;
 }
 
 .hr-01 {

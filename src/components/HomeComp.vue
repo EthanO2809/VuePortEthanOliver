@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hgt">
     <div>
       <img
         src="https://i.postimg.cc/qB1tKZr3/emojipng-com-12280844.png"
@@ -20,9 +20,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+
+};
 </script>
 
 <style scoped>
-
+.hgt {
+  height: 66vh;
+}
 </style>
