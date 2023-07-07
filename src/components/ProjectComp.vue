@@ -123,12 +123,13 @@ a:after {
 .card {
   width: 100%;
   height: 100%;
-  border-radius: inherit;
+  border-radius: 15px;
 }
 
 .card .front-content {
   width: 100%;
   height: 100%;
+ border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
