@@ -3,7 +3,7 @@
     <hr class="hr-01 mt-5" />
     <h1 class="text-white">Education:</h1>
     <br>
-    <div class="container center">
+    <div class="container center bbl">
       <div class="row">
         <div class="col" v-for="item in education" :key="item.id" data-aos="zoom-in-up">
           <center>
