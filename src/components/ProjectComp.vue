@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div
-          class="col-6 mb-5 mt-5"
+          class="col-6 mb-5 mt-5 con"
           v-for="item in projects"
           :key="item.id"
           data-aos="fade-up"
@@ -28,10 +28,8 @@
                     {{ item.description }}
                     <br />
                     <br />
-                    <a :href="item.github" class="btn btn-primary">Github</a>
-                    <br />
-                    <br />
-                    <a :href="item.netlify" class="btn btn-primary">Netlify</a>
+                    <a :href="item.github" style="margin-right: 1rem;" class="btn btn-primary" target="_blank">Github</a>
+                    <a :href="item.netlify" class="btn btn-primary" target="_blank">Netlify</a>
                   </p>
                 </div>
               </div>
@@ -57,6 +55,62 @@ export default {
 </script>
 
 <style scoped>
+a {
+  position: relative;
+  width: 7em;
+  height: 2.5em;
+  border-radius: 1em;
+  text-align: center;
+  font-family: poppins;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgb(83, 109, 255);
+  border: none;
+  transition: color .2s linear,
+        box-shadow .3s linear,
+        background-color .3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+a:focus,
+a:hover {
+  box-shadow: 0 0 110px #fff;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #111;
+  font-weight: 500;
+}
+
+a:focus:before,
+a:hover:before,
+a:focus:after,
+a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+a:before,
+a:after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width, left, 250ms cubic-bezier(0.25, .8, .25, 1);
+}
+
+a:before {
+  top: -2px;
+}
+
+a:after {
+  bottom: -2px;
+}
+
 .card-container {
   width: 550px;
   height: 400px;
@@ -109,7 +163,6 @@ export default {
   padding: 20px;
   line-height: 1.5;
   border-radius: 5px;
-  pointer-events: none;
   transform: translateY(96%);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -129,5 +182,84 @@ export default {
 
 .card:hover .front-content p {
   opacity: 0;
+}
+
+@media (width <= 300px) {
+  .card-container {
+    width: 250px;
+    height: 250px;
+    margin: 0 !important;
+    font-size: 10px;
+  }
+  .card {
+    width: 250px;
+    margin: 0 !important;
+    height: 250px;
+    font-size: 10px !important;
+  }
+  .row {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .con {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .hvr {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .heading {
+    font-size: 14px !important;
+    margin-bottom: 3rem;
+  }
+  .btn {
+    width: 4rem;
+    height: 1rem;
+    font-size: 6px !important;
+  }
+}
+@media (width <= 700px) {
+  .card-container {
+    width: 250px;
+    height: 250px;
+    margin: 0 !important;
+    font-size: 10px;
+  }
+  .card {
+    width: 250px;
+    margin: 0 !important;
+    height: 250px;
+    font-size: 10px !important;
+  }
+  .row {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .con {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .hvr {
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .heading {
+    font-size: 14px !important;
+    margin-bottom: 3rem;
+  }
+  .btn {
+    width: 4rem;
+    height: 1rem;
+    font-size: 6px !important;
+  }
 }
 </style>
